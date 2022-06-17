@@ -1,7 +1,8 @@
 prakash = {
     name : "PRAKASH KUMAR" ,
     Favnum : 18 ,
-    love : "Rinki" ,
+    love : "coding" ,
+    food : "Dosa" ,
     developer : true
 }
 module.exports = prakash ;
