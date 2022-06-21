@@ -10,5 +10,3 @@ function sumofsquareofDigits(num){
 let ans =  sumofsquareofDigits(49) ;
 console.log(ans);
 console.log(sumofsquareofDigits(491))
-console.log(sumofsquareofDigits(4151))
-console.log(sumofsquareofDigits(78991))

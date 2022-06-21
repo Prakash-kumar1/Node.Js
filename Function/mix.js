@@ -9,4 +9,4 @@ let ans = ( (num) => {
     }
     return sum ;
 })(49)
-console.log(ans);
+console.log(ans) 
