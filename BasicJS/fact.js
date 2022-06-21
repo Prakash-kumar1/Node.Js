@@ -7,7 +7,7 @@ function facto(num){
     }
       return fact 
 }
-let ans = facto(5);
+let ans = facto(5);   
 let x = facto(4);
 let y = facto(3);
 console.log(ans);
