@@ -3,12 +3,11 @@
 function b(x,y){
     return x*y ;
 }
-
 function a(b){
     return b(5,7);
 }
-
 console.log(a(b)) ;
+
 
 
 // Using setTimeout and setInterval function
