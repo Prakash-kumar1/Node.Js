@@ -8,6 +8,11 @@ function a(b){
 }
 console.log(a(b)) ;
 
+function c(b){
+    return b(10,7);
+}
+console.log(c(b)) ;
+
 
 
 // Using setTimeout and setInterval function
