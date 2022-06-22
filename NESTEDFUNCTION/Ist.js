@@ -3,25 +3,25 @@
 function b(x,y){
     return x*y ;
 }
-function a(b){
-    return b(5,7);
+function a(d,e){
+    return b(d,e);
 }
-console.log(a(b)) ;
+// console.log(a(5,7)) ;
 
-function c(b){
-    return b(10,7);
+function c(){
+    return a(10,7);
 }
-console.log(c(b)) ;
+console.log(c()) ;
 
 
 
 // Using setTimeout and setInterval function
 
 
-function c(){
-    console.log("Hello World")
-    console.log("Hello Prakash")
-    console.log("I Am The Best")
-}
-setTimeout(c,300);
-setInterval(c,30000)
+// function c(){
+//     console.log("Hello World")
+//     console.log("Hello Prakash")
+//     console.log("I Am The Best")
+// }
+// setTimeout(c,300);
+// setInterval(c,30000)
