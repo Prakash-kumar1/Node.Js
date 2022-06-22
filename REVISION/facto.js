@@ -11,6 +11,8 @@ function facto(num){
 
    let b = facto ;
    console.log(b(5))
+   console.log(b(2))
+   console.log(b(3))
 
    let c = facto ;
    console.log(c(4))
