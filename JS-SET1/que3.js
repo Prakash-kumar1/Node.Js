@@ -1,4 +1,5 @@
-// for two digit number
+// Question No.-3: Write a program to read the first and last digit of a number
+
 n=parseInt(process.argv[2])
 first_digit=Math.floor(n/10)
 last_digit=n%10
