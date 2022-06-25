@@ -1,3 +1,5 @@
+// Question No.-6: Take a number and return all the even digits of the number.
+
 n=parseInt(process.argv[2])
 let i=1
 while(n!=0){
