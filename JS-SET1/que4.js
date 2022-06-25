@@ -1,3 +1,5 @@
+// Question No.-4: Check whether the given number is an armstrong number or not. 
+
 size=parseInt(process.argv[2])
 number=parseInt(process.argv[3])
 num=number
