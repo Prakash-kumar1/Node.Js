@@ -1,3 +1,5 @@
+// Question No.-1: Using a loop print all odd numbers up to and including n. Don’t include 0. 
+
 n=parseInt(process.argv[2])
 for(let i=1; i<=n; i++){
     if(i%2!=0){
