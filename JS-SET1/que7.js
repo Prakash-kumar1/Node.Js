@@ -1,3 +1,5 @@
+// Question No.-7: Check whether the given number is equal to its reverse number or not
+
 let rev = 0;
 let num = parseInt(process.argv[2]);
 let lastDigit;
