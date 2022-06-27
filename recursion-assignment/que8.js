@@ -13,5 +13,7 @@ function prime(no,i){
     return (no+" is A Prime Number")
 }
 
-console.log(prime(23,2))
-console.log(prime(22,2))
+console.log(prime(23,2)) ;
+console.log(prime(22,2)) ;
+console.log(prime(29,2)) ;
+console.log(prime(50,2)) ;
