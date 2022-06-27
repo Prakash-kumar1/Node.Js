@@ -4,4 +4,4 @@ function range(a,b){
         return range(a+1,b);
     }
 }
-range(40,50)
+range(40,50) ;
