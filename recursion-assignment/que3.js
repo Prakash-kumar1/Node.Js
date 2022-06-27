@@ -9,4 +9,5 @@ function evenNumber(a,b){
     }
 }
 
-console.log(evenNumber(10,30))
+console.log(evenNumber(10,30));
+console.log(evenNumber(40,60));
