@@ -1,3 +1,5 @@
+// This is a Immediately Invoked Function Expression (IIFE).
+
 let ans = (function sumofsquareofDigits(num){
     let sum = 0 
     while(num != 0){
