@@ -4,7 +4,8 @@
 function allNumber(a,b){
     if(a<=b){
         console.log(a)
-        return allNumber(a+1,b)
+        return allNumber(a+1,b) ;
     }
 }
-console.log(allNumber(10,20))
+console.log(allNumber(10,20)) ;
+console.log(allNumber(180,200)) ;
