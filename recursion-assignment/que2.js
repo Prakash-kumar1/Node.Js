@@ -6,5 +6,5 @@ function allNumber(a,b){
         return allNumber(a,b-1)
     }
 }
-
-console.log(allNumber(10,20))
+console.log(allNumber(190,200)) ;
+console.log(allNumber(10,20)) ;
