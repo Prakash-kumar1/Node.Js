@@ -1,3 +1,5 @@
+// This is a Arrow Function.
+
 let sumofsquareofDigits = (num) => {
     let sum = 0 
     while(num != 0){
