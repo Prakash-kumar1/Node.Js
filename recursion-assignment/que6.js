@@ -7,5 +7,5 @@ function sum(a,b,s){
     }
     console.log(s)
 }
-
-console.log(sum(10,20,0))
+console.log(sum(50,60,0)) ;
+console.log(sum(10,20,0)) ;
