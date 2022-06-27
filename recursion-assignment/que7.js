@@ -6,7 +6,7 @@ function product(a,b,p){
         // console.log(a)
         return product(a+1,b,p)
     }
-    console.log(p)
+    console.log(p) ;
 }
-
-console.log(product(10,20,1))
+console.log(product(1,2,1)) ;
+console.log(product(10,20,1)) ;
