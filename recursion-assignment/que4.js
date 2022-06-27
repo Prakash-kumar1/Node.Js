@@ -7,5 +7,5 @@ function fact(no,p){
     }
     console.log(p)
 }
-
-console.log(fact(5,1))
+console.log(fact(3,1));
+console.log(fact(5,1));
