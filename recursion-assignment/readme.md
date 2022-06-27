@@ -1,4 +1,4 @@
-Recursion Assignment Questions And Screenshots of their Outputs.
+Recursion Assignment Questions - Solutions  And Screenshots of their Outputs.
 
 # Question no. 1 #Output
 ![Screenshot (68)](https://user-images.githubusercontent.com/105423219/175784713-530070ea-8a26-4a70-adcd-6486d521cabe.png)
