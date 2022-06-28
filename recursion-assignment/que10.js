@@ -4,9 +4,9 @@
 function power(no,exp,ans){
     if(exp>0){
         ans=ans*no
-        return (power(no,exp-1,ans))
+        return (power(no,exp-1,ans)) ;
     }
-    console.log(ans)
+    console.log(ans) ;
 }
 
-console.log(power(2,4,1))
+console.log(power(2,4,1)) ;
