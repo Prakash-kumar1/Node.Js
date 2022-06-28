@@ -6,9 +6,9 @@ function sum(a,i,s){
             s=s+a
             return sum(a+1,i+1,s)
         }
-        return sum(a+1,i,s)
+        return sum(a+1,i,s) ;
     }
-    console.log(s)
+    console.log(s) ;
 }
 
-console.log(sum(1,1,0))
+console.log(sum(1,1,0)) ;
