@@ -12,3 +12,21 @@ let sumofsquareofDigits = (num) => {
 let ans =  sumofsquareofDigits(49) ;
 console.log(ans)
 console.log(sumofsquareofDigits(491))
+
+// this keyword in arrow function
+
+let obj = {
+    firstname : "santosh",
+    lastname  : "gond" ,
+    age : 33,
+    getfullName : function(){
+        console.log(this.firstname , this.lastname);
+    },
+    getarrowName : function(){
+        fname : "rinki" ,
+        console.log(this) ,
+        console.log(this.fname , this.lastname);
+    }
+}
+obj.getfullName() ;
+obj.getarrowName() ;
