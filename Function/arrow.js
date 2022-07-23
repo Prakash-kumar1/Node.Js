@@ -22,7 +22,7 @@ let obj = {
     getfullName : function(){
         console.log(this.firstname , this.lastname);
     },
-    getarrowName : function(){
+    getarrowName : () => {
         fname : "rinki" ,
         console.log(this) ,
         console.log(this.fname , this.lastname);
