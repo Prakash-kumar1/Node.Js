@@ -11,8 +11,8 @@ while(num != 0){
   num = Math.floor(num/10);
 }
 if(rev==t){
-    console.log("yes")
+    console.log("yes") ;
 }
 else{
-    console.log("no")
+    console.log("no") ;
 }
