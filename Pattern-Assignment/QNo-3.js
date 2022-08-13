@@ -14,5 +14,5 @@ for(i=1;i<=num1;i++){
         c++ 
     }
   }
-  console.log(str)
+  console.log(str) ;
 }
