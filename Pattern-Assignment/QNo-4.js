@@ -9,11 +9,11 @@ for(k=1;k<=j;k++){
     while(i<=((j*(j+1)/2))){
         // console.log(a)
         str=str+`${a} `
-        c=a+b
-        a=b
-        b=c
-        i++
+        c=a+b ;
+        a=b  ;
+        b=c  ;
+        i++  ;
     } 
 }
-console.log(str)
+console.log(str) ;
 }
