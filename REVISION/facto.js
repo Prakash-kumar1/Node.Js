@@ -10,9 +10,9 @@ function facto(num){
 //  Function are Ist class citizens it means we can pass into variable
 
    let b = facto ;
-   console.log(b(5))
-   console.log(b(2))
-   console.log(b(3))
+   console.log(b(5)) ;
+   console.log(b(2)) ;
+   console.log(b(3)) ;
 
    let c = facto ;
    console.log(c(4))
