@@ -3,11 +3,14 @@
   let str='' ;
   for(j=1;j<=n;j++){
     if(i==j || (i+j==n+1)){
-        str=str+`${' * '}`
+        str=str+`${' * '}` ;
+
     }
-         else{
+     else{
             str=str+`${'   '}`
-                 }
+ }
   }
+
   console.log(str) ;
+  
  }
