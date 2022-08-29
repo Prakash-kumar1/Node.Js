@@ -1,4 +1,4 @@
-// making Arrow function for division
+// Question no - 7: making Arrow function for division ??
 
 let divide = (a,b) => {
     let c = Math.floor(a/b)
