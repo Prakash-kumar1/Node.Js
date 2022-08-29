@@ -1,3 +1,5 @@
+//  Question no - 5: Finding Multiplication of a Number using IIFE Function ??
+
 function cross(p,q){
     let r = p*q ;
      return r ;
