@@ -1,3 +1,5 @@
+// Question no - 2: Subtarction of two numbers using Function ??
+
 function minus(x,y){
     let z = x-y ;
     return z ;
