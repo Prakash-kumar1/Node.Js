@@ -1,4 +1,4 @@
-// Factorial function passing into Multiple variable
+//Question no - 6: Factorial function passing into Multiple variable ??
 
 function facto(num){
     let fact = 1 ;
