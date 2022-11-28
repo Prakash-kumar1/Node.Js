@@ -11,7 +11,7 @@
 
 // async function apiCall() {
 //     return new Promise(resolve => {
-//         setTimeout(() => {resolve('b'), 50})
+//         setTimeout(() => {resolve('b')}, 50)
 //     }) ;
 // } ;
 
@@ -24,6 +24,7 @@
 // logger() ;
 // // Answer => bca
 
+// "use strict"
 // let green ;
 // grnee = false ;
 // console.log(grnee)
@@ -96,47 +97,84 @@
 // // Answer => 5
 
 
-const arr = [] ;
-try{
-    arr.push('try') ;
-    throw new Error() ;
-} catch (e) {
-    arr.push('catch') ;
-} finally {
-    arr.push('finally')
-} ;
+// const arr = [] ;
+// try{
+//     arr.push('try') ;
+//     throw new Error() ;
+// } catch (e) {
+//     arr.push('catch') ;
+// } finally {
+//     arr.push('finally')
+// } ;
 
-console.log(arr)
+// console.log(arr)
 // Answer => [ 'try', 'catch', 'finally' ]
 
 
+// let myArray = [1,2]
+// myArray.customProperty = true
+
+// for(const  element of myArray){
+//     console.log(element)
+// }
+
+// for(const  index in myArray){
+//     const element = myArray[index]
+//     console.log(element)
+// }
 
 
+// myArray.forEach(element => {
+//     console.log(element)
+// })
 
 
+// for(let index=0;  index <myArray.length; index++){
+//     const element = myArray[index]
+//     console.log(element)
+// }
 
 
+// const myArray = new Array(2)
+
+// myArray[1] = 1
+// myArray[3] = 3
+
+// console.log('Length:', myArray.length)
+// console.log('Elements')
+
+// for(const element of myArray){
+//     console.log('\t',element)  
+// }
 
 
+// function* gen1(){
+//     console.log(yield 1) 
+//     console.log(yield 2) 
+//     console.log(yield 3) 
+// }
+
+// const iterator = gen1() 
+
+// console.log(iterator.next('a').value)
+// console.log(iterator.next('b').value)
+// console.log(iterator.next('c').value)
 
 
+const string1 = `{
+    "name" : "John" ,
+    "age" : 20 ,
+    "createdAt" : "2021-08-03T04:36:33.843Z"
+}`
 
+const string2 = `{
+    "name" : "Doe" ,
+    "age" : 20 ,
+    "createdAt" : "2021-08-03T04:36:33.843Z"
+}`
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+console.log(JSON.parse(string1))
+console.log(JSON.parse(string2))
 
 
 
