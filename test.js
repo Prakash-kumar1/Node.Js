@@ -161,20 +161,68 @@
 // console.log(iterator.next('c').value)
 
 
-const string1 = `{
-    "name" : "John" ,
-    "age" : 20 ,
-    "createdAt" : "2021-08-03T04:36:33.843Z"
-}`
+// const string1 = `{
+//     "name" : "John" ,
+//     "age" : 20 ,
+//     "createdAt" : "2021-08-03T04:36:33.843Z"
+// }`
 
-const string2 = `{
-    "name" : "Doe" ,
-    "age" : 20 ,
-    "createdAt" : "2021-08-03T04:36:33.843Z"
-}`
+// const string2 = `{
+//     "name" : "Doe" ,
+//     "age" : 20 ,
+//     "createdAt" : "2021-08-03T04:36:33.843Z"
+// }`
 
-console.log(JSON.parse(string1))
-console.log(JSON.parse(string2))
+// console.log(JSON.parse(string1))
+// console.log(JSON.parse(string2))
+
+
+// const f = n => n <= 1 ? 1 : n * f(n - 1) ;
+// let g = f(4) ;
+// console.log(g)
+
+
+// function recursiveStringReverse(string) {
+//     if(string.length <= 1) {
+//         return string
+//     }
+
+//     let firstChar = string.charAt(0) 
+//     let lastChars = string.slice(1) 
+
+//     // return firstChar + recursiveStringReverse(lastChars)
+//     console.log(recursiveStringReverse(lastChars)) 
+// }
+// recursiveStringReverse("string")
+
+
+// function firstIndexElementInArray(element, array) {
+//     let result = -1
+
+//     for(let i = 0; i < array.length; i++){
+//         if(array[i] === element){
+//            console.log(i+1)
+//         }
+        
+//     }
+//     console.log(result)
+// }
+// firstIndexElementInArray(3, [1,2,3,4,5])
+
+// function main() {
+//     let sum = 0 ;
+//     let i = 10 ;
+//     while (i < 1) {
+//         sum = sum + i ;
+//         sum = sum * 2 ;
+//     }
+//     console.log(sum)
+// }
+// main()
+
+
+
+
 
 
 
