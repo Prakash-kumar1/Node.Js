@@ -221,9 +221,33 @@
 // main()
 
 
+// function _(arr){
+//     let temp = 0 ;
+//     for(const x of arr){
+//         if(x % 2 == 1){
+//             temp += 1
+//         } else {
+//             temp = 0
+//         }
+//         if(temp == 3){
+//             console.log(true)
+//         }
+//     }
+//     console.log(false)
+// }
+// _([4,5,7,23,12])
 
-
-
+function is_prime_number(num){
+    let j = 2 
+    while (j * j <= num){
+        if(num % j === 0){
+            console.log(false)
+        }
+        j++
+    }
+    console.log(true)
+}
+is_prime_number(19)
 
 
 
