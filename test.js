@@ -248,9 +248,3 @@ function is_prime_number(num){
     console.log(true)
 }
 is_prime_number(19)
-
-
-
-
-
-
