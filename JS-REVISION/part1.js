@@ -417,82 +417,315 @@ console.log("Rest value goes into newVal using spread operator =>>", newVal) ;
 //                 The same way, JavaScript objects can have properties, which define their characteristics. Object is reference type.
 
 
+const person = {
+    name: "harshit",
+    age: 22,
+    hobbies: ["guitar", "sleeping", "listening music"]
+}
+console.log(person);
 
 
+// how to add key value pair to objects
+person["person"] = "male";
+console.log(person);
 
+person.brother = "Prakash" ;
+console.log(person);
 
+//####==>>>  I want to add this key in objects
+const key = "email" ;
 
+person[key] = "harshi8745@gmail.com" ;
+console.log(person) ;
 
 
+// How to iterate objects : Iteration object done by two methods :
+//                       1:- for in loop    2:- Object.keys
 
+let data1 = {
+    name : "Prakash kumar",
+    age : 23,
+    student : "Aircampus",
+    job : "Frontend Developer"
+}
 
+for(let key in data1){
+// it gives all key 
+    console.log(key) ;
 
+// it gives all value
+    console.log(data1[key])
 
+// we can also write this way, it will give key-value pair
+    console.log(`${key} => ${data1[key]}`)
+}
 
+// We can use these methods also for iteration :-
+console.log(Object.keys(data1))
+console.log(Object.values(data1))
+console.log(Object.entries(data1))
 
 
+// Spread operator: it will spread elements
+let newArr = [..."abc"] ;
+console.log(newArr) ;
 
+ newArr = [..."123gsjhgsdj43547684j"] ;
+console.log(newArr) ;
 
 
+// Spread operator in Objects :-
 
+const obj1 = {
+    key1 : "value11" ,
+    key2 : "value12" ,
+} ;
 
+const obj2 = {
+    key3 : "value14" ,
+    key4 : "value15" ,
+}
 
+// const newObj = {...obj1, ...obj2 }
+const newObj = {...obj1, ...obj2, name: "anjali", branch: "Electric"}
+console.log(newObj) ;
 
 
+// Object Destructuring
 
+const band = {
+    bandName: "Led zeppline",
+    song: "stairway to heaven",
+    year: 1978,
+    otherSong: "kashima is mine",
+    album: "Despacito",
+    singer: "Louis fonsi",
+    plateform: "You Tube",
+    company: "Google",
+    ceo: "Sunder pitchai",
+    country: "America",
+};
 
+let ourBand = band.bandName ;
+let famousSong = band.song ;
+console.log(ourBand, famousSong)
 
+const {bandName, otherSong} = band ;
+console.log(bandName, otherSong) ;
 
+const {ceo, singer,  ...restProps} = band ;
+console.log(restProps) ;
 
 
+// @@###$$%%%==>>  Objects Inside Array 
 
+const users = [
+    {userId: 1, fname: "harshit", lname: "Vashitha", gender: "male"} ,
+    {userId: 2, fname: "Gayatri", lname: "Bhagwat", gender: "Female"} ,
+    {userId: 3, fname: "Madhur", gender: "Transgender"} ,
+]
 
+for(let user of users){
+    console.log(user) ;
+    console.log(user.userId) ;
+    console.log(user.lname) ;
+}
 
 
+// nested destructuring 
+const usersData = [
+    {userId: 1,firstName: 'harshit', gender: 'male'},
+    {userId: 2,firstName: 'mohit', gender: 'male'},
+    {userId: 3,firstName: 'nitish', gender: 'male'},
+]
 
+const [user1, user2, user3] = usersData ;
+console.log(user2) ;
 
+// if i want user1 name and user3 gender
+// const [{firstName}, , {gender}] = usersData;
 
+// We can also change the name
+
+const [{firstName: user1firstName}, , {gender: user3gender}] = usersData;
+console.log(user1firstName);
+console.log(user3gender);
+
+
+// @@@@####$$$$%%^^&&&***==>>  Functions  @@@@####$$$$%%^^&&&***==>>
 
+// Question:-7     what is function in javascript ??
+// Answer =>>       A function in JavaScript is similar to a procedure—a set of statements that performs a task or calculates a value, 
+//                 but for a procedure to qualify as a function,it should take some input and 
+//                  return an output where there is some obvious relationship between the input and the output.
 
 
+console.log(undefined + undefined);       // Not a number (NaN)
+console.log(undefined * undefined);       // Not a number (NaN)
+console.log(2 + 4 + undefined);           // Not a number (NaN)
 
 
+// Question:-8  print First character of any string ??
+function firstChar(string){
+    return string[0] ;
+}
+console.log(firstChar("Rajesh"))
 
 
+// function 
+// input : array, target (number)
+// output: index of target if target present in array 
 
+function findTarget(array, target){
+    for(let i = 0; i<array.length; i++){
+        if(array[i]===target){
+            return i;
+        }
+    }
+    return -1;
+}
+const myArray1 = [1,3,8,90,56,78,23,98,12,45]
+const ans = findTarget(myArray1, 4);
+console.log(ans);
 
 
+// Difference between Function Declaration and Function Expression:
 
+//  	Function Declaration	                                                 Function Expression
+// 1.	A function declaration must have a function name.	            A function expression is similar to a function declaration 
+//                                                                     without the function name.
+// 2.	Function declaration does not require a variable assignment. 	Function expressions can be stored in a variable assignment.
+// 3.	These are executed before any other code.	                    Function expressions load and execute only when the program interpreter reaches the line of code.
+// 4.	The function in function declaration can be accessed before 	The function in function expression can be accessed only after 
+//     and after the function definition.                              the function definition.
+// 5.	Function declarations are hoisted	                            Function expressions are not hoisted
+// 6.	Syntax: function geeksforGeeks(paramA, paramB)               	Syntax: var geeksforGeeks= function(paramA, paramB) { // Set of statements }
+//     { // Set of statements }
 
 
+// Hoisting :=> Hoisting in JavaScript is a behavior in which a function or a variable can be used before declaration. 
 
+hello() ;
 
+function hello(){
+    console.log("an example of Hoisting")
+}
 
+//  functions inside function 
+function app(){
+    const myFunc = () =>{
+        console.log("hello from myFunc")
+    }
+    
+    const addTwo = (num1, num2) =>{
+        return num1 + num2;
+    }
 
+    const mul = (num1, num2) => num1* num2;
 
+    console.log("inside app");
+    myFunc();
+    console.log(addTwo(2,3));
+    console.log(mul(2,3));
+}
+app();
 
 
+// Question:-8 =>>   What is Lexical Scope in JavaScript? 
+// Answer =>>      Lexical scope is the definition area of an expression. IOW, an item's lexical scope is the place in which 
+                //    the item got created.
+//              Lexical Environment is the environment of the function where it is written. 
 
+// Example :- 
+const myVar = "<<=>>> value1 in global scope outside of function <<=>>>" ;
 
+// when JS don't get value of myVar then it serached into myApp Lexical Environment which is Global scope
+function myApp(){
+    // const myVar = "<<=>>> value1 in myApp <<=>>>" ;
+     
+// when JS don't get value of myVar then it serached into myFunc Lexical Environment which is myApp
+    function myFunc(){
+        // const myVar = "value45 in myFunc" ;
+        console.log("Inside myFunc --->>>", myVar)
+    }
 
+    console.log(myVar) ;
+    myFunc() ;
+}
 
+myApp() ;
 
 
 
+// / block scope vs function scope 
 
 
+// let and const are block scope but var is function scope 
 
+// In case of var
+{
+    var firstNam = "harshit";
+    console.log(firstNam);
+}
+console.log(firstNam);
 
 
+// In case of let and const
+{
+   let lastNam = "bhardwaj";
+    console.log(lastNam);
+}
 
+// console.log(lastNam);   // it gives error because let can be only access in Block
 
 
+function myBlock(){
+    if(true){
+        var firstName = "Shivansh Rawat";
+        console.log(firstName);
+    }
 
+    if(true){
+        console.log(firstName);
+    }
+    console.log(firstName);
+}
+myBlock();
 
 
+// default parameters 
 
+function addTwo(a,b=0){
+    return a+b;
+}
 
+const ans1 = addTwo(4, 8);
+const ans2 = addTwo(4);
+console.log(ans1);
+console.log(ans2);
 
+
+//  rest parameters 
+
+function myFunc(a,b,...c){
+    console.log(`a is ${a}`);
+    console.log(`b is ${b}`);
+    console.log(`c is`, c);
+}
+
+myFunc(3,4,5,6,7,8,9);
+
+
+function addAll(...numbers){
+    let total = 0;
+    for(let number of numbers){
+        total = total + number;
+    }
+    return total;
+}
+
+const ans3 = addAll(4,5,4,2,10);
+console.log(ans3);
 
 
 
