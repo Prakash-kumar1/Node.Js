@@ -728,118 +728,270 @@ const ans3 = addAll(4,5,4,2,10);
 console.log(ans3);
 
 
+// !!!@@@###$$$%%%^^^===>>>  param Destructuring :-
+// object
+// react
+
+const person1 = {
+    name : "Kundan" ,
+    gender : "male" ,
+    age : 23,
+    company : "Aditya birla" ,
+}
+
+// function printDetails(obj){
+//     console.log(obj.name)
+//     console.log(obj.gender)
+// }
 
+// Or we can also destructure parameters
+function printDetails({name, gender, age, company}){
+    console.log(name)
+    console.log(gender)
+    console.log(age)
+    console.log(company)
+}
 
+printDetails(person1) ;
+
 
+// Question:-10 =>>   What is a Callback Function ??
+// Answer :=> A callback is a function passed as an argument to another function. This technique allows a function to call another function. A callback function can run after another function has finished.
+// When you want one function to execute only after another function has completed its execution, we use callback functions in JavaScript. It needs to pass as a parameter to other functions to make a function callback.
+
+function myFunc2(message){
+    console.log("Inside my myFunc2") ;
+    console.log(`${message}`) ;
+}
 
+function myFunc1(a){
+    console.log("Hello Universe in callback function") ;
+    // console.log(a) ;
+    a("passing from callback function") ;                   // here a is a Callback Function
+}
 
+myFunc1(myFunc2) ;
 
 
+// function returning function
+
+function myFunc3(){
+    function hello(){
+        return "hello india"
+    }
+    return hello ;
+}
+
+const ans4 = myFunc3() ;
+console.log(ans4()) ;
+
+
+// !!!@@@###$$$%%%^^^===>>> Important Array methods !!!@@@###$$$%%%^^^===>>>
+
+// For each method :
+const numbers1 = [4,2,5,7,8]
+numbers1.forEach(function(number, index){
+    console.log (`index is ${index} number is ${number}`)
+    console.log (` output is ${index * number}`)
+})
+
+// Another example
+const users2 = [
+    {firstName: "harshit", age: 23},
+    {firstName: "mohit", age: 21},
+    {firstName: "nitish", age: 22},
+    {firstName: "garima", age: 20},
+]
+
+users2.forEach((user)=>{
+    console.log(user.firstName);
+});
+
+users2.forEach((user, index)=>{
+    console.log(user.firstName, index);
+})
+
+// using for of loop
+for(let user of users2){
+    console.log(user.firstName);
+}
+
+
+// map method :
+const numbers3 = [40,20,50,70,80,90,100]
+const squareNumber = numbers3.map((number, index)=>{
+    return `index: ${index}, ${number * number}`
+})
+console.log(squareNumber) ;
+
+
+const users3 = [
+    {firstName: "harshit", age: 23},
+    {firstName: "mohit", age: 21},
+    {firstName: "nitish", age: 22},
+    {firstName: "garima", age: 20},
+]
+
+const userNames = users3.map((user)=>{
+    return user.firstName;
+});
 
+console.log(userNames);
 
 
+// Differences between forEach() and map() methods:
 
+//  	forEach()	                                                              map() 
+// 1	The forEach() method does not returns a  	                  The map() method returns an entirely new array.
+//     new array based on the given array.
+// 2	The forEach() method returns “undefined“.	                  The map() method returns the newly created array according 
+//                                                                   to the provided callback function.
+// 3	The forEach() method doesn’t return anything hence  	      With the map() method, we can chain other methods like reduce,sort etc.
+//   the method chaining technique cannot be applied here.
+// 4.	It is not executed for empty elements.	                      It does not change the original array.
 
 
+// Filter method :
+const numbers4 = [1,2,3,4,5,6,7,8,9,10,12,23,46,78] ;
 
+const evenNumbers = numbers4.filter((number)=>{
+    return number % 2 === 0 ;
+});
+console.log(evenNumbers) ;
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// Reduce method :
+const numbers5 = [1,2,3,5,6,7,8,9,10,12] ;
+// aim :- sum of all the numbers in array
+
+const sum = numbers5.reduce((accumulator, currentValue)=>{
+    return accumulator + currentValue;
+}, 100);
+
+console.log(sum);
+// accumulator , currentValue,     return 
+// 100               1               101 
+// 101               2               103
+// 103               3               106
+// 106               5               111
+// 111               6               117
+// 117               7               124
+// 124               8               132
+// 132               9               141
+// 141               10              151
+// 151               12              163
+
+
+// Another examples
+const userCart = [
+    {productId: 1, productName: "mobile", price: 12000},
+    {productId: 2, productName: "laptop", price: 22000},
+    {productId: 3, productName: "tv", price: 15000},
+]
+
+const totalAmount = userCart.reduce((totalPrice, currentProduct)=>{
+    return totalPrice + currentProduct.price;
+}, 0)
+
+console.log(totalAmount);
+
+// total price      currentValue     return 
+// 0                {}                  12000
+// 12000            22000                34000
+// 34000            15000                49000
+
+
+// price lowToHigh HighToLow  using sort methods
+const products = [
+    {productId: 1, produceName: "p1",price: 300 },
+    {productId: 2, produceName: "p2",price: 3000 },
+    {productId: 3, produceName: "p3",price: 200 },
+    {productId: 4, produceName: "p4",price: 8000 },
+    {productId: 5, produceName: "p5",price: 500 },
+]
+
+// lowToHigh
+const lowToHigh = products.sort((a,b)=>{
+    return a.price-b.price
+});
+console.log(lowToHigh);
+
+// High To low
+const highToLow = products.sort((a,b)=>{
+    return b.price-a.price;
+});
+console.log(highToLow);
+
+
+// / fill method =>>>  syntax: fill(value, start, end)  
+
+const myArray3 = new Array(10).fill(0);
+console.log(myArray3);
+
+const myArray2 = [1,2,3,4,5,6,7,8];
+myArray2.fill(0,2,5);
+console.log(myArray2);
+
+
+// iterables :-  string and array are iterable
+//               jispe humm for of loop laga sake
+
+const fullName = "Shivansh Rawat" ;
+for(let char of fullName){
+    console.log(char) ;
+}
+
+const items = ["item1", "item2", "item3"] ;
+for(let item of items){
+    console.log(item) ;
+}
+
+// array like objects :   // jinke pass length property hoti hai
+// aur jise hum index se access kar sakte hai. like string
+
+let animal = "Wild-Boar"
+console.log(animal.length)
+console.log(animal[3])
+
+
+// Sets (it is iterable)
+// store data  
+// sets also have its own methods
+// No index-based access 
+// Order is not guaranteed
+// unique items only (no duplicates allowed)
+const items2 = ['item1', 'item2', 'item3'];
+const numbers = new Set();
+// numbers.add(1);
+numbers.add(2);
+numbers.add(3);
+numbers.add(4);
+numbers.add(5);
+numbers.add(6);
+numbers.add(items);
+if(numbers.has(1)){
+    console.log("1 is present")
+}else{
+    console.log("1 is not present")
+}
+
+for(let number of numbers){
+    console.log(number);
+}
+
+for(let item of items2){
+    console.log(item);
+}
+
+// Another example:  finding unique elements ??
+const myArray4 = [1,2,4,4,5,6,5,6,9,9,9,34];
+const uniqueElements = new Set(myArray4);
+let length = 0;
+for(let element of uniqueElements){
+    length++;
+}
+console.log(length);
+console.log(uniqueElements);
 
 
 
