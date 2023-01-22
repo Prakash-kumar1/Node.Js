@@ -105,6 +105,11 @@ const person9 = {
     food : "Chhola Bhatura",
 }
 
+aboutMe.call(person8, "guitar", "Louis")
+aboutMe.call(person9, "Harmonium", "")
+
+// OR WE can write for appply this way
+
 aboutMe.apply(person8, ["guitar", "Louis"])
 aboutMe.apply(person9, ["Harmonium", ""])
 
@@ -133,9 +138,9 @@ func() ;
 
 // Another example
 const person12 = {
-    fname : "arti",
-    gender : "female",
-    drink: "coca-cola",
+    fname : "Juli singh",
+    gender : "Transgender",
+    drink: "Sprite, mazza",
     details: function(){
         console.log(this.fname, this.gender, this.drink)
     }
@@ -147,6 +152,7 @@ const myFunc = person12.details.bind(person12)
 myFunc() ;
 
 // in case of arrow function, this  takes one level up means window object
+// with arrow function, this keyword always represents the object that define arrow function.
 const person13 = {
     fname : "arti",
     gender : "female",
@@ -240,7 +246,7 @@ obj2 = Object.create(obj1)
 console.log(obj2.key2)   //value2
 console.log(obj2.key3)   //value3
 
-console.log(obj2.__proto__)   // it gives obj1, because Object.create makes obj1 prototype of oj2
+console.log(obj2.__proto__)   // it gives obj1, because Object.create makes obj1 prototype of obj2
 
 // !!!@@@###$$$%%%%^^^&&&&****(()) -->> !!!@@@###$$$%%%%^^^&&&&****(())
 
@@ -401,7 +407,7 @@ class CreateData{
 }
 
 const user31 = new CreateData('Sanjeeta', 'singh', 'harshit@gmail.com', 18, "my address");
-const user32 = new CreateData('harsh', 'vashsith', 'harshit@gmail.com', 19, "my address");
+const user32 = new CreateData('harsh', 'mastani', 'harshit@gmail.com', 19, "my address");
 const user33 = new CreateData('mohit', 'vashsitha', 'harshit@gmail.com', 17, "my address");
 
 // console.log(Object.getPrototypeOf(user1));
@@ -522,60 +528,17 @@ student2.fullName = "Anjali Yadav" ;
 console.log(student2)
 
 
+// Question no.=>> 16 :-  what is Hoisting in javascript ??
+// Answer:- During the creation phase in Global execution context, the JS engine moves the function declarations, variables or classes 
+//          to the top of their scope. this feature is known as Hoisting.
 
+// Question no.=>> 15 :-  what is temporal dead zone in javascript ??
+// Answer:- The time between hoisting && code execution is known as "Temporal Dead Zone". 
+//          Temporal Dead Zone is the period of time during which the let and const declarations cannot be accessed. TDZ  starts
+//  when the code execution enters the block which contains the let or const declaration and continues until the declaration has executed.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// !!!!@@@####$$$$++++====>>>  Important website for scopes and Lexical Environment  <<<<=== !!!!@@@####$$$$++++====>>>
+//                  https://anuradha.hashnode.dev/scope-chain-and-lexical-environment-in-javascript
 
 
 

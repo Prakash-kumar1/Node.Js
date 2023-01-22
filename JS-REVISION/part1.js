@@ -426,7 +426,7 @@ console.log(person);
 
 
 // how to add key value pair to objects
-person["person"] = "male";
+person["gender"] = "male";
 console.log(person);
 
 person.brother = "Prakash" ;
@@ -603,7 +603,9 @@ console.log(ans);
 //     { // Set of statements }
 
 
-// Hoisting :=> Hoisting in JavaScript is a behavior in which a function or a variable can be used before declaration. 
+// Question no.=>> 16 :-  what is Hoisting in javascript ??
+// Answer:- During the creation phase in Global execution context, the JS engine moves the function declarations, 
+//           variables or classes  to the top of their scope. this feature is known as Hoisting.
 
 hello() ;
 
@@ -756,8 +758,10 @@ printDetails(person1) ;
 
 
 // Question:-10 =>>   What is a Callback Function ??
-// Answer :=> A callback is a function passed as an argument to another function. This technique allows a function to call another function. A callback function can run after another function has finished.
-// When you want one function to execute only after another function has completed its execution, we use callback functions in JavaScript. It needs to pass as a parameter to other functions to make a function callback.
+// Answer :=> A callback is a function passed as an argument to another function. This technique allows a function 
+//            to call another function. A callback function can run after another function has finished.
+// When you want one function to execute only after another function has completed its execution, we use callback 
+// functions in JavaScript. It needs to pass as a parameter to other functions to make a function callback.
 
 function myFunc2(message){
     console.log("Inside my myFunc2") ;
