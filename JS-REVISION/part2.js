@@ -162,7 +162,21 @@ const person13 = {
         console.log(this.fname, this.gender, this.drink)
     }
 }
-person13.details(person13)
+person13.details()
+
+// example:-2 
+let me = { 
+    name: "Ashutosh Verma", 
+    thisInArrow:() => { 
+    console.log("My name is " + this.name); // no 'this' binding here 
+    }, 
+    thisInRegular(){ 
+    console.log("My name is " + this.name); // 'this' binding works here 
+    } 
+   };
+   
+   me.thisInArrow(); 
+   me.thisInRegular();
 
 
 // / function (that function create object)

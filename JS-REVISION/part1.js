@@ -763,6 +763,20 @@ printDetails(person1) ;
 // When you want one function to execute only after another function has completed its execution, we use callback 
 // functions in JavaScript. It needs to pass as a parameter to other functions to make a function callback.
 
+// example no ==>> 1
+function show(a){
+    console.log("I am show function =>>" + a) ;
+}
+
+function geeky(callback){
+    let a = 100;
+    callback(a) ;
+}
+
+geeky(show)
+
+
+// example no ==>> 2
 function myFunc2(message){
     console.log("Inside my myFunc2") ;
     console.log(`${message}`) ;
